@@ -15,7 +15,7 @@ let food = {
 }
 
 function criarBG() {
-    context.fillStyle = "lightgreen";
+    context.fillStyle = "#B4FFA5";/*BEFFFE";*/
     context.fillRect(0, 0, 16 * box, 16 * box);
 }
 
@@ -68,7 +68,10 @@ function iniciarJogo(){
         if(snake[0].x == snake[i].x && snake[0].y == snake[i].y)
         {
             clearInterval(jogo);
-            alert('Game Over :(')
+            document.getElementById('musica-jogo').pause();
+            var audio = new Audio('../som/smb_gameover.wav');
+            audio.play();
+            alert('Game Over :(');
         }    
         
     }
@@ -92,6 +95,8 @@ function iniciarJogo(){
     }
     else
     {
+        var audio = new Audio('../som/smb_powerup.wav');
+        audio.play();
         food.x = Math.floor(Math.random() * 15 + 1) * box;
         food.y = Math.floor(Math.random() * 15 + 1) * box;
     }
@@ -105,5 +110,3 @@ function iniciarJogo(){
 }
 
 let jogo = setInterval(iniciarJogo, 200);
-
-

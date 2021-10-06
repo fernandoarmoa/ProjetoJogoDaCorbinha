@@ -12,9 +12,71 @@
 </head>
 <body>
     
-    <h1>Jogo da Cobrinha</h1>
-    <canvas id="snake" width="512" height="512"></canvas>
+    <header>
+        <h1>Jogo da Cobrinha</h1>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="esquerda">
+                    <p class="como-jogar">
+                        <h3>
+                            Como Jogar
+                        </h3>
+                        <h4>Objetivo:</h4>
+                        <p class="descricao-jogo">
+                            Pegar o pontinho vermelho sem tocar no corpo da cobrinha.
+                        </p>
+                        <h4>Instruções:</h4>
+                        <ul class="list-como-jogar">
+                            <li class="linha1"><strong>Seta Direita:</strong> para mover para a direita</li>
+                            <li class="linha2"><strong>Seta Esquerda:</strong> para mover para a esquerda</li>
+                            <li class="linha1"><strong>Seta Cima:</strong> para mover para cima</li>
+                            <li class="linha2"><strong>Seta Baixo:</strong> para mover para baixo</li>
+                        </ul>
+                    </p>
+                    <div class="play-replay">
+                        <div class="botao">
+                            <button onClick="window.location.reload();"><i class="far fa-play-circle"></i></button>
+                        </div>
+                        <div class="paragrafo">
+                            <p>
+                                Play / Replay
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="central">
+                    <div class="container">
+                        <canvas id="snake" width="512" height="512"></canvas>
+                    </div>
+                </div>
+                <div class="direita">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="rodape">
+            <div class="audio">
+                <audio id="musica-jogo" autoplay="autoplay" loop controls="controls">
+                    <source src="/som/yarblat_smb_techno.mp3" type="audio/mp3">
+                </audio>    
+            </div>
+            <div class="informacoes">
+                <p>
+                    Desenvolvido por Fernando Armoa
+                </p>    
+            </div>
+        </div>
+    </footer>
+
 
     <script src="/js/script.js"></script>
+
+    <!--js Font Awesome -->
+    <script feder src="https://kit.fontawesome.com/de1ff05699.js" crossorigin="anonymous"></script>
 </body>
 </html>
